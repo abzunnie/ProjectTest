@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Product List Display</title>
+</head>
+<body>
+<h3><th th:text ="${companyName}">Comapany Name</th></h3>
+
+<table>
+
+	<th>
+		<td>ID</td>
+		<td>Name</td>
+		<td>Price</td>
+		<td>BarCode</td>
+		<td>Mfg Date</td>
+		<td>Expiry Date</td>
+	</th>
+	
+	<tr th:each="product : ${Products}">
+		<td th:text="${product.productID}"></td>
+		<td th:text="${product.productCategory}"></td>
+		<td th:text="${product.productPrice}"></td>
+		<td th:text="${product.Name}"></td>
+		<td th:text="${product.mfgDate}"></td>
+		<td th:text="${product.expiryDate}"></td>
+	</tr>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User List Display</title>
+</head>
+<body>
+<h3><th td:text ="${userName}">User Name</th></h3>
+<table>
+
+	<th>
+		<td>User ID</td>
+		<td>User Name</td>
+		<td>User Email</td>		
+	</th>
+	
+	<tr th:each="user : ${users}">
+		<td th:text="${user.userID}"></td>
+		<td th:text="${user.userName}"></td>
+		<td th:text="${user.userEmail}"></td>
+		</tr>
+
+</table>
+
+</body>
+</html>
